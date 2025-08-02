@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: darkgreen;
+}
+
+.tech-list {
+    border: 1px solid black;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+#page-container {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+
+@media (max-width: 768px) {
+    #page-container {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+
+    }
+}
+
+.angular-image {
+    width: 500px;
+    height: 250px;
+}
+
+
+@media (max-width: 500px) {
+    p {
+        color: red;
+    }
+}
