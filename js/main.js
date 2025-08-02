@@ -12,9 +12,4 @@ loginForm.addEventListener('submit', (e) => {
     console.log('Попытка отправки формы!')
 })
 
-const statusText = document.getElementById('status-text')
-const actionBtn = document.getElementById('action-btn')
-actionBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    statusText.textContent = 'Действие выполнено!'
-})
+mainHeader.textContent = 'Мой первый проект на Git!'
