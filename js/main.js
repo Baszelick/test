@@ -1,15 +1,10 @@
-const users = [
-    { id: 1, name: 'Иван', isAdmin: false },
-    { id: 2, name: 'Анна', isAdmin: true },
-    { id: 3, name: 'Петр', isAdmin: false },
-    { id: 4, name: 'Ольга', isAdmin: true },
-]
-
-const userNames = users.map(user => user.name)
-console.log(userNames)
-
-const adminUsers = users.filter(user => user.isAdmin)
-console.log(adminUsers)
-
-const userWithId3 = users.find(user => user.id === 3)
-console.log(userWithId3)
+async function fetchUsers() {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await response.json();
+        console.log(users)
+    } catch (error) {
+        console.error('Не удалось загрузить пользователей:',error);
+    }
+}
+fetchUsers()
